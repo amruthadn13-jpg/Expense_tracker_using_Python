@@ -1,0 +1,29 @@
+user_input = input("Enter the Expenses separated by space:\n")
+
+expense_list = user_input.split()
+
+expense = []
+
+for i in expense_list:
+    expense.append(int(i))
+
+total = 0
+
+for value in expense:
+    total += value
+
+maximum = expense[0]
+
+for value in expense:
+    if value > maximum:
+        maximum = value
+
+minimum = expense[0]
+
+for value in expense:
+    if value < minimum:
+        minimum = value
+
+print("Total Expense:", total)
+print("Highest Expense:", maximum)
+print("Lowest Expense:", minimum)
